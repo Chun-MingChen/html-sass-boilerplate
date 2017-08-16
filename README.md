@@ -28,7 +28,7 @@ yarn watch-css
 ### Todo
 - [x] css watch
 - [ ] autoprefix 
-- [ ] open the browser automatically
+- [x] open the browser automatically
 - [ ] node babel watch
 - [ ] sync the online website
 
