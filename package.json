@@ -1,0 +1,19 @@
+{
+  "name": "html-sass-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for building static website with sass",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/Chun-MingChen/html-sass-boilerplate.git",
+    "type": "git"
+  },
+  "author": "Chun-MingChen <nick830314@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^0.0.3"
+  }
+}
