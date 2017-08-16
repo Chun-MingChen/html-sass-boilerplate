@@ -11,9 +11,11 @@
   "license": "MIT",
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "dev": "npm-run-all --parallel watch-css"
   },
   "devDependencies": {
-    "node-sass-chokidar": "^0.0.3"
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.0.2"
   }
 }
