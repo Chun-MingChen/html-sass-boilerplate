@@ -13,9 +13,13 @@
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "open-browser": "./node_modules/.bin/opn $(pwd)/src/index.html",
-    "dev": "npm-run-all --parallel watch-css open-browser"
+    "dev": "npm-run-all --parallel watch-css open-browser",
+    "fetch:website": "gulp fetch:website"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.0.2",
     "opn-cli": "^3.1.0"
