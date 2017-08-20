@@ -6,4 +6,5 @@ export default {
   renameSetting: {
     suffix: '.min',
   },
+  author: 'ChunMing',
 };
