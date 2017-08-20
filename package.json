@@ -10,12 +10,13 @@
   "author": "Chun-MingChen <nick830314@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "open-browser": "./node_modules/.bin/opn $(pwd)/src/index.html",
-    "dev": "npm-run-all --parallel watch-css open-browser",
+    "dev": "npm-run-all --parallel css:watch open-browser",
     "fetch:website": "gulp fetch:website",
-    "css:generate": "gulp css:generate"
+    "css:prod": "npm-run-all --sequential css:build css:minify",
+    "css:minify": "gulp css:generate",
+    "css:build": "node-sass-chokidar src/ -o src/",
+    "css:watch": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
