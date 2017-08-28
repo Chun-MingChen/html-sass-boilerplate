@@ -16,7 +16,7 @@
     "css:prod": "npm-run-all --sequential css:build css:minify",
     "css:minify": "gulp css:generate",
     "css:build": "node-sass-chokidar src/ -o src/",
-    "css:watch": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "css:watch": "yarn css:build && node-sass-chokidar src/ -o src/ --watch --recursive"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
